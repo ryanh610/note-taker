@@ -36,21 +36,20 @@ app.post("/api/notes", (req, res) =>
       let newNote = {
         id: id,
         title: note.title,
-        text: note.text,
+        text: note.text
       };
       db.push(newNote);
-      fs.writeFile(
-        path.join(__dirname, "/db/db.json"),
-        JSON.stringify(db, null, 2),
-        function (err) {
-          if (err) throw err;
+      fs.writeFile("./db/db.json", JSON.stringify(db), (err) => {
+        if (err) {
+          throw err;
         }
-      );
+        res.send(db);
+      });
     }
   )
 );
 
-app.delete("/api/notes:id", (req, res) => {
+app.delete("/api/notes/:id", (req, res) => {
   const params = req.params.id;
   fs.readFile(
     path.join(__dirname, "/db/db.json"),
