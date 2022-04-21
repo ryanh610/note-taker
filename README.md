@@ -34,7 +34,7 @@
 
   to use this program, click get started, enter a note, and hit save. click previous notes on the left hand column to view them.
 
-  Follow my usage guide here: https://youtu.be/mJChLuAjC7M
+  Follow my usage guide here: https://youtu.be/xzEqR3xvJXM
 
   ## Contribution Guideline
   
